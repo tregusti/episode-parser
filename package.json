@@ -1,0 +1,27 @@
+{
+  "name": "episode-parser",
+  "version": "0.0.1",
+  "description": "Parse file names of tv show episodes.",
+  "main": "lib/parser.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter=dot"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "episode",
+    "filename",
+    "parse",
+    "parser",
+    "show",
+    "tv"
+  ],
+  "author": "Glenn Jorde <glenn@tregusti.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^5.7.1",
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
