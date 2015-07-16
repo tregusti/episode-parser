@@ -63,4 +63,12 @@ describe('parser', function() {
     group: 'PSYPHER',
     ext: 'mkv'
   })
+  example('Monster.1x19.720p.HDTV.x264-HiPP', {
+    show: 'Monster',
+    season: 1,
+    episode: 19,
+    source: 'hdtv',
+    codec: 'x264',
+    group: 'HiPP'
+  })
 })
