@@ -71,4 +71,11 @@ describe('parser', function() {
     codec: 'x264',
     group: 'HiPP'
   })
+  example('Hannibal.S02E09.Shizakana.720p.WEB-DL.DD5.1.H.264-NTb', {
+    show: 'Hannibal',
+    name: 'Shizakana',
+    source: 'webdl',
+    codec: 'x264',
+    group: 'NTb'
+  })
 })
