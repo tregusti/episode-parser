@@ -52,4 +52,15 @@ describe('parser', function() {
     season: 1,
     episode: 4
   })
+  example('Orange Is the New Black S01E01 I Wasn\'t Ready 720p BRRip DD5.1 x264-PSYPHER.mkv', {
+    show: 'Orange Is the New Black',
+    season: 1,
+    episode: 1,
+    name: 'I Wasn\'t Ready',
+    quality: 720,
+    source: 'bluray',
+    codec: 'x264',
+    group: 'PSYPHER',
+    ext: 'mkv'
+  })
 })
