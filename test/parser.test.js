@@ -93,4 +93,11 @@ describe('parser', function() {
     codec: 'x264',
     group: 'KILLERS'
   })
+  example('Fairly Legal S02E02 Start Me Up.mkv', {
+    show: 'Fairly Legal',
+    season: 2,
+    episode: 2,
+    name: 'Start Me Up',
+    ext: 'mkv'
+  })
 })
