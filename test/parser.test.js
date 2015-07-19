@@ -83,4 +83,14 @@ describe('parser', function() {
     codec: 'x264',
     group: 'NTb'
   })
+  example('True.Blood.S07E06.Karma.PROPER.720p.HDTV.x264-KILLERS', {
+    show: 'True Blood',
+    season: 7,
+    episode: 6,
+    name: 'Karma',
+    quality: 720,
+    source: 'hdtv',
+    codec: 'x264',
+    group: 'KILLERS'
+  })
 })
