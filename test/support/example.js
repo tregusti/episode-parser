@@ -1,6 +1,6 @@
 var expect = require('chai').expect
 
-module.exports = function (filename, details) {
+function run(filename, details, context) {
   context('with filename like ' + filename, function() {
     var result
     beforeEach(function() {
@@ -19,4 +19,14 @@ module.exports = function (filename, details) {
       }
     })
   })
+}
+
+module.exports = function(filename, details) {
+  run(filename, details, context)
+}
+module.exports.only = function(filename, details) {
+  run(filename, details, context.only)
+}
+module.exports.skip = function(filename, details) {
+  run(filename, details, context.skip)
 }
