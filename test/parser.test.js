@@ -100,4 +100,8 @@ describe('parser', function() {
     name: 'Start Me Up',
     ext: 'mkv'
   })
+  example('Orphan.Black.S03E05.Scarred.by.Many.Past.Frustrations.720p.HDTV.x264-KILLERS[rarbg]', {
+    group: 'KILLERS',
+    name: 'Scarred by Many Past Frustrations'
+  })
 })
