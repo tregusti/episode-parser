@@ -8,13 +8,15 @@ module.exports = function (filename, details) {
     })
     Object.keys(details).forEach(function(property) {
       var value = details[property]
-      var desc = value === undefined
-        ? 'does not find the ' + property
-        : 'finds the ' + property
-
-      it(desc, function() {
-        expect(result).to.have.a.property(property, value)
-      })
+      if (value === undefined) {
+        it('does not find the ' + property, function() {
+          expect(result).to.not.have.a.property(property)
+        })
+      } else {
+        it('finds the ' + property, function() {
+          expect(result).to.have.a.property(property, value)
+        })
+      }
     })
   })
 }

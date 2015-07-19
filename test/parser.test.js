@@ -71,6 +71,11 @@ describe('parser', function() {
     codec: 'x264',
     group: 'HiPP'
   })
+  example('Monster.S01E01.264.days.of.horror.720p.mkv', {
+    source: undefined,
+    codec: undefined,
+    name: '264 days of horror'
+  })
   example('Hannibal.S02E09.Shizakana.720p.WEB-DL.DD5.1.H.264-NTb', {
     show: 'Hannibal',
     name: 'Shizakana',
