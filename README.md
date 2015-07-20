@@ -1,11 +1,11 @@
 # episode-parser
 
 [![CircleCI](https://img.shields.io/circleci/project/tregusti/episode-parser/master.svg)][circleci]
-[![GitHub releases](https://img.shields.io/github/release/tregusti/episode-parser.svg)][releases]
-[![License](https://img.shields.io/npm/tregusti/episode-parser.svg)][license]
+[![NPM release](https://img.shields.io/npm/v/episode-parser.svg)][npm-module]
+[![License](https://img.shields.io/npm/l/episode-parser.svg)][license]
 
   [circleci]: https://circleci.com/gh/tregusti/episode-parser
-  [releases]: https://github.com/tregusti/episode-parser/releases
+  [npm-module]: https://www.npmjs.com/package/episode-parser
   [license]: http://tregusti.mit-license.org/
 
 A javascript utility for parsing file names in a format that sometimes is used
