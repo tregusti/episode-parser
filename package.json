@@ -1,6 +1,6 @@
 {
   "name": "episode-parser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Parse file names of tv show episodes.",
   "main": "lib/parser.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "unittest": "./node_modules/.bin/mocha --reporter=dot"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/tregusti/episode-parser.git"
   },
   "keywords": [
     "episode",
@@ -20,7 +21,10 @@
     "tv"
   ],
   "author": "Glenn Jorde <glenn@tregusti.com>",
-  "license": "ISC",
+  "license": {
+    "type": "MIT",
+    "url": "http://tregusti.mit-license.org/"
+  },
   "devDependencies": {
     "chai": "^3.0.0",
     "eslint": "^0.24.1",
