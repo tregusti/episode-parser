@@ -1,3 +1,5 @@
+'use strict'
+
 var expect = require('chai').expect
 
 function run(filename, details, context) {
@@ -8,6 +10,7 @@ function run(filename, details, context) {
     })
     Object.keys(details).forEach(function(property) {
       var value = details[property]
+      /* eslint curly:0 */
       if (value === undefined) {
         it('does not find the ' + property, function() {
           expect(result).to.not.have.a.property(property)

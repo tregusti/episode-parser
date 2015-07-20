@@ -1,3 +1,5 @@
+'use strict'
+
 var example = require('./support/example')
 
 describe('parser', function() {

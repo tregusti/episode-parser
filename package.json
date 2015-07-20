@@ -4,7 +4,9 @@
   "description": "Parse file names of tv show episodes.",
   "main": "lib/parser.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter=dot"
+    "style": "./node_modules/.bin/eslint .",
+    "test": "npm run style && npm run unittest",
+    "unittest": "./node_modules/.bin/mocha --reporter=dot"
   },
   "repository": {
     "type": "git"
@@ -20,8 +22,8 @@
   "author": "Glenn Jorde <glenn@tregusti.com>",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^5.7.1",
     "chai": "^3.0.0",
+    "eslint": "^0.24.1",
     "mocha": "^2.2.5"
   }
 }
