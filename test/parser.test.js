@@ -38,17 +38,6 @@ describe('parser', function() {
     group:   'SKGTV',
     ext:     'srt'
   })
-  example('House.of.Cards.2013.S02E06.720p.HDTV.x264-SKGTV.srt', {
-    show:    'House of Cards',
-    season:  2,
-    episode: 6,
-    year:    2013,
-    quality: 720,
-    source:  'hdtv',
-    codec:   'x264',
-    group:   'SKGTV',
-    ext:     'srt'
-  })
   example('girls.s01e04.720p.hdtv.x264-2hd.mkv', {
     show: 'girls',
     season: 1,
