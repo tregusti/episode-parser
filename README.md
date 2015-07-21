@@ -63,3 +63,11 @@ your case. If you feel somewhat lazy, create an issue instead and I might look
 into it.
 
   [pr-help]: https://help.github.com/articles/using-pull-requests/
+
+## Thank you
+
+[![Gratipay](http://img.shields.io/gratipay/tregusti.svg)](https://gratipay.com/tregusti/)
+[![Flattr](http://img.shields.io/badge/flattr-donate-brightgreen.svg)](https://flattr.com/profile/tregusti)
+
+Building good software and tools takes time. Please do support a future for this project if you are
+using it. Thank you!
