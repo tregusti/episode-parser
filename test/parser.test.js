@@ -95,4 +95,12 @@ describe('parser', function() {
     group: 'KILLERS',
     name: 'Scarred by Many Past Frustrations'
   })
+  example('Futurama.S06.1080p.BluRay.DTS.x264-CtrlHD', {
+    show: 'Futurama',
+    season: 6,
+    quality: 1080,
+    source: 'bluray',
+    codec: 'x264',
+    group: 'CtrlHD'
+  })
 })
