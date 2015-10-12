@@ -51,6 +51,12 @@ If the parser can't parse the file name, `null` will be returned. If the parser
 can't parse out a specific details, the property for that detail will be missing
 from the result.
 
+## Installation
+
+```sh
+npm install episode-parser
+```
+
 ## Versioning
 
 This package uses [semver](http://semver.org/spec/v2.0.0.html).
