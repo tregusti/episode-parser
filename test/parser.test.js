@@ -117,4 +117,10 @@ describe('parser', function() {
     quality: 720,
     group: 'dimension'
   })
+  example('Homeland - 03x09 - Horse and Wagon', {
+    show: 'Homeland',
+    season: 3,
+    episode: 9,
+    name: 'Horse and Wagon'
+  })
 })
