@@ -103,4 +103,10 @@ describe('parser', function() {
     codec: 'x264',
     group: 'CtrlHD'
   })
+  example('Homeland - 03x09 - Horse and Wagon', {
+    show: 'Homeland',
+    season: 3,
+    episode: 9,
+    name: 'Horse and Wagon'
+  })
 })
