@@ -103,4 +103,24 @@ describe('parser', function() {
     codec: 'x264',
     group: 'CtrlHD'
   })
+  example('the.good.wife.709.hdtv-lol', {
+    show: 'The Good Wife',
+    season: 7,
+    episode: 9,
+    source: 'hdtv',
+    group: 'lol'
+  })
+  example('ray.donovan.312.720p-dimension', {
+    show: 'Ray Donovan',
+    season: 3,
+    episode: 12,
+    quality: 720,
+    group: 'dimension'
+  })
+  example('Homeland - 03x09 - Horse and Wagon', {
+    show: 'Homeland',
+    season: 3,
+    episode: 9,
+    name: 'Horse and Wagon'
+  })
 })
