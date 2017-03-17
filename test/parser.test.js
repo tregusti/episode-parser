@@ -123,4 +123,11 @@ describe('parser', function() {
     episode: 9,
     name: 'Horse and Wagon'
   })
+  example('the.big.bang.theory.1017.hdtv-lol', {
+    show: 'The Big Bang Theory',
+    season: 10,
+    episode: 17,
+    source: 'hdtv',
+    group: 'lol'
+  })
 })
