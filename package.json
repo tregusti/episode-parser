@@ -26,8 +26,8 @@
     "url": "http://tregusti.mit-license.org/"
   },
   "devDependencies": {
-    "chai": "^3.0.0",
-    "eslint": "^1.10.3",
-    "mocha": "^2.2.5"
+    "chai": "^4.2.0",
+    "eslint": "^6.0.1",
+    "mocha": "^6.1.4"
   }
 }
