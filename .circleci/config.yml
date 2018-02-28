@@ -1,0 +1,56 @@
+version: 2
+jobs:
+  node6:
+    working_directory: ~/tregusti/episode-parser
+    docker:
+      - image: circleci/node:6
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-6-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-6-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: npm run test
+
+  node8:
+    working_directory: ~/tregusti/episode-parser
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-8-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-8-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: npm run test
+
+  node9:
+    working_directory: ~/tregusti/episode-parser
+    docker:
+      - image: circleci/node:9
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-9-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-9-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: npm run test
+
+workflows:
+  version: 2
+  nodes:
+    jobs:
+      - node6
+      - node8
+      - node9
+
+# vim: sw=2 ts=2 expandtab
