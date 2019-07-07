@@ -117,6 +117,13 @@ describe('parser', function() {
     quality: 720,
     group: 'dimension'
   })
+  example('the.big.bang.theory.1017.hdtv-lol', {
+    show: 'The Big Bang Theory',
+    season: 10,
+    episode: 17,
+    source: 'hdtv',
+    group: 'lol'
+  })
   example('Homeland - 03x09 - Horse and Wagon', {
     show: 'Homeland',
     season: 3,
