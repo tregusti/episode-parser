@@ -3,6 +3,19 @@
 var example = require('./support/example')
 
 describe('parser', function() {
+  example('Hello 2014 Season 01 Episode 1 the Problem 720p.HDTV.x264-SKGTV.srt', {
+    show:    'Hello',
+    season:  1,
+    episode: 1,
+    name: 'the Problem',
+    year: 2014,
+    quality: 720,
+    source: 'hdtv',
+    codec: 'x264',
+    group: 'SKGTV',
+    ext: 'srt'
+  })
+  
   example('Hello.S01E05.HDTV-GOTTALOVEiT', {
     show:    'Hello',
     season:  1,
