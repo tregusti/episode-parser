@@ -20,6 +20,7 @@ into an object with the following possible properties:
   - `year`, integer: The release year, `2013`.
   - `season`, integer: The season number, `7`.
   - `episode`, integer: The episode number, `6`.
+  - `episodeCount`, integer: The count of episodes this file name includes, `1`.
   - `name`, string: The name of the episode, `'Karma Sucks'`.
   - `quality`, integer: The quality taken from `720p` or `1080p`. In this case `720`.
   - `source`, string: Available values are `'hdtv'`, `'webdl'`, In this case `'hdtv'`.

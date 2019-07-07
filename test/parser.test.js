@@ -26,13 +26,14 @@ describe('parser', function() {
     show:    'battlestar galactica',
     season:  1,
     episode: 1,
-    range: 2,
+    episodeCount: 3,
   })
 
   example('full frontal with samantha bee s01e14.mkv', {
     show:    'full frontal with samantha bee',
     season:  1,
     episode: 14,
+    episodeCount: 1,
   })
 
   example('Hello.S01E05.HDTV-GOTTALOVEiT', {
