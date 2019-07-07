@@ -3,6 +3,13 @@
 var example = require('./support/example')
 
 describe('parser', function() {
+  example('Hello Season 01 Episode 1 the Problem', {
+    show:    'Hello',
+    season:  1,
+    episode: 1,
+    name: 'the Problem',
+  })
+  
   example('Hello.S01E05.HDTV-GOTTALOVEiT', {
     show:    'Hello',
     season:  1,
