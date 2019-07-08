@@ -3,12 +3,10 @@
 [![CircleCI](https://img.shields.io/circleci/project/tregusti/episode-parser/master.svg)][circleci]
 [![NPM release](https://img.shields.io/npm/v/episode-parser.svg)][npm-module]
 [![License](https://img.shields.io/npm/l/episode-parser.svg)][license]
-[![bitHound](https://www.bithound.io/github/tregusti/episode-parser/badges/score.svg)][bithound]
 
   [circleci]: https://circleci.com/gh/tregusti/episode-parser
   [npm-module]: https://www.npmjs.com/package/episode-parser
   [license]: http://tregusti.mit-license.org/
-  [bithound]: https://www.bithound.io/github/tregusti/episode-parser
 
 A javascript utility for parsing file names in a format that sometimes is used
 for tv shows.
