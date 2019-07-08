@@ -21,6 +21,9 @@
     "tv"
   ],
   "author": "Glenn Jorde <glenn@tregusti.com>",
+  "contributors": [
+    "Jeffrey Burt (https://github.com/Jephuff)"
+  ],
   "license": {
     "type": "MIT",
     "url": "http://tregusti.mit-license.org/"
