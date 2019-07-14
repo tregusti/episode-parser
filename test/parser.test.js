@@ -15,13 +15,25 @@ describe('parser', function() {
     group: 'SKGTV',
     ext: 'srt'
   })
+  example('Hello 2014 Season 01 Episode 1-4 the Problem 720p.HDTV.x264-SKGTV.srt', {
+    show:    'Hello',
+    season:  1,
+    episode: 1,
+    name: 'the Problem',
+    year: 2014,
+    quality: 720,
+    source: 'hdtv',
+    codec: 'x264',
+    group: 'SKGTV',
+    ext: 'srt',
+    episodeCount: 4
+  })
   
   example('comedians in cars getting coffee S1 E1', {
     show:    'comedians in cars getting coffee',
     season:  1,
     episode: 1,
   })
-
   example('battlestar galactica s01e01-e03 - saga of a star world.mp4', {
     show:    'battlestar galactica',
     season:  1,
@@ -95,6 +107,7 @@ describe('parser', function() {
     codec: 'x264',
     group: 'HiPP'
   })
+
   example('Monster.S01E01.264.days.of.horror.720p.mkv', {
     source: undefined,
     codec: undefined,
@@ -157,10 +170,25 @@ describe('parser', function() {
     source: 'hdtv',
     group: 'lol'
   })
+  example('the.big.bang.theory.1017-19.hdtv-lol', {
+    show: 'The Big Bang Theory',
+    season: 10,
+    episode: 17,
+    episodeCount: 3,
+    source: 'hdtv',
+    group: 'lol'
+  })
   example('Homeland - 03x09 - Horse and Wagon', {
     show: 'Homeland',
     season: 3,
     episode: 9,
+    name: 'Horse and Wagon'
+  })
+  example('Homeland - 03x09-10 - Horse and Wagon', {
+    show: 'Homeland',
+    season: 3,
+    episode: 9,
+    episodeCount: 2,
     name: 'Horse and Wagon'
   })
 })
