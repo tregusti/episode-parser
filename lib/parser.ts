@@ -18,14 +18,17 @@ interface Result {
   ext?: string;
 }
 
+const parsers = [
+  parseEnglishLike,
+  parseSceneLike,
+  parseSceneLikeWithX,
+  parseSceneLike000,
+]
 export = function(filename: string) {
-  let result
-
-  if ((result = parseEnglishLike(filename))) return result
-  if ((result = parseSceneLike(filename))) return result
-  if ((result = parseSceneLikeWithX(filename))) return result
-  if ((result = parseSceneLike000(filename))) return result
-
+  for (let i = 0; i < parsers.length; i += 1) {
+    const result = parsers[i](filename)
+    if (result) return result
+  }
   return null
 }
 
