@@ -2,11 +2,14 @@
   "name": "episode-parser",
   "version": "1.2.0",
   "description": "Parse file names of tv show episodes.",
-  "main": "lib/parser.js",
+  "main": "dist/parser.js",
   "scripts": {
     "style": "./node_modules/.bin/eslint .",
     "test": "npm run style && npm run unittest",
-    "unittest": "./node_modules/.bin/mocha --reporter=dot"
+    "unittest": "npm run build && ./node_modules/.bin/mocha --reporter=dot",
+    "build": "tsc",
+    "watch": "npm run build -- -w",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,8 +32,11 @@
     "url": "http://tregusti.mit-license.org/"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
     "chai": "^4.2.0",
     "eslint": "^6.0.1",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "typescript": "^3.5.3"
   }
 }
