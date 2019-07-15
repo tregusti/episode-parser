@@ -119,6 +119,28 @@ describe('parser', function() {
     codec: undefined,
     name: '264 days of horror'
   })
+  describe('codec', function() {
+    example('Show.S01E01.Name.720p.H.264-Group', {
+      show: 'Show',
+      name: 'Name',
+      codec: 'x264',
+    })
+    example('Show.S01E01.Name.720p.H.265-Group', {
+      show: 'Show',
+      name: 'Name',
+      codec: 'x265',
+    })
+    example('Show.S01E01.Name.720p.x264-Group', {
+      show: 'Show',
+      name: 'Name',
+      codec: 'x264',
+    })
+    example('Show.S01E01.Name.720p.x265-Group', {
+      show: 'Show',
+      name: 'Name',
+      codec: 'x265',
+    })
+  })
   example('Hannibal.S02E09.Shizakana.720p.WEB-DL.DD5.1.H.264-NTb', {
     show: 'Hannibal',
     name: 'Shizakana',

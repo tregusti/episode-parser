@@ -151,7 +151,7 @@ function parseDetails(details: string, result: Result) {
   const re = {
     quality: /(480|720|1080)[pi]/,
     source: /(hdtv|brrip|bluray|bd|dvd|dvdrip|web-?dl)/i,
-    codec: /((?:h\.|x)264|x265)/i,
+    codec: /((?:h\.|x)264|(?:h\.|x)265)/i,
     other: /((?:real[\. ])?proper)/gi,
     group: /-(\w+)(?:\[\w+\])?(\....)?$/,
     extension: /\.(...)$/,
@@ -184,6 +184,7 @@ function parseDetails(details: string, result: Result) {
   if (codecMatch) {
     const codec = codecMatch[0].toLowerCase()
     if (codec.indexOf('264') >= 0) result.codec = 'x264'
+    else if (codec.indexOf('265') >= 0) result.codec = 'x265'
     else result.codec = codec
   }
 
