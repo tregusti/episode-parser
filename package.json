@@ -9,7 +9,7 @@
     "unittest": "npm run build && ./node_modules/.bin/mocha --reporter=dot",
     "build": "tsc",
     "watch": "npm run build -- -w",
-    "prepare": "npm run build"
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
