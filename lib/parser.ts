@@ -4,7 +4,7 @@ enum Source {
   WebDL = 'webdl',
 }
 
-type Result  = {
+type Result = {
   show: string;
   season: number;
   year?: number;
@@ -14,13 +14,15 @@ type Result  = {
   source?: Source;
   group?: string;
   ext?: string;
-} & ({
-  episode: number;
-  episodeCount: number;
-} | {
-  episode?: undefined;
-  episodeCount?: undefined;
-})
+} & (
+  | {
+    episode: number;
+    episodeCount: number;
+  }
+  | {
+    episode?: undefined;
+    episodeCount?: undefined;
+  })
 
 const parsers = [
   parseEnglishLike,
@@ -47,10 +49,12 @@ function parseEnglishLike(filename: string) {
     const result: Result = {
       show: m[1].replace(/\./g, ' '),
       season: +m[4],
-      ...m[6] ? {
-        episode: firstEpisode,
-        episodeCount: (lastEpisode - firstEpisode) + 1 
-      } : {}
+      ...(m[6]
+        ? {
+          episode: firstEpisode,
+          episodeCount: lastEpisode - firstEpisode + 1,
+        }
+        : {}),
     }
 
     if (m[3]) result.year = +m[3]
@@ -72,10 +76,12 @@ function parseSceneLike(filename: string) {
     const result: Result = {
       show: m[1].replace(/\./g, ' '),
       season: +m[4],
-      ...m[6] ? {
-        episode: firstEpisode,
-        episodeCount: (lastEpisode - firstEpisode) + 1
-      } : {}
+      ...(m[6]
+        ? {
+          episode: firstEpisode,
+          episodeCount: lastEpisode - firstEpisode + 1,
+        }
+        : {}),
     }
 
     if (m[3]) result.year = +m[3]
@@ -98,7 +104,7 @@ function parseSceneLikeWithX(filename: string) {
       show: humanize(m[1]),
       season: +m[4],
       episode: firstEpisode,
-      episodeCount: (lastEpisode - firstEpisode) + 1
+      episodeCount: lastEpisode - firstEpisode + 1,
     }
 
     if (m[3]) result.year = +m[3]
@@ -125,7 +131,7 @@ function parseSceneLike000(filename: string) {
       ),
       season: +m[4].substring(0, m[4].length - episodeStr.length),
       episode: firstEpisode,
-      episodeCount: (lastEpisode - firstEpisode) + 1
+      episodeCount: lastEpisode - firstEpisode + 1,
     }
 
     if (m[3]) result.year = +m[3]
