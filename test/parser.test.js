@@ -48,6 +48,12 @@ describe('parser', function() {
     episodeCount: 1,
   })
 
+  example('Goodbye.S01E08.DVDRip-S0ME', {
+    show:    'Goodbye',
+    season:  1,
+    episode: 8,
+    source:  'dvd',
+  })
   example('Hello.S01E05.HDTV-GOTTALOVEiT', {
     show:    'Hello',
     season:  1,

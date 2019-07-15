@@ -2,6 +2,7 @@ enum Source {
   BluRay = 'bluray',
   HDTV = 'hdtv',
   WebDL = 'webdl',
+  DVD = 'dvd'
 }
 
 type Result = {
@@ -176,6 +177,7 @@ function parseDetails(details: string, result: Result) {
     if (source.substr(0, 1) === 'b') result.source = Source.BluRay
     if (source === 'hdtv') result.source = Source.HDTV
     if (/web-?dl/.test(source)) result.source = Source.WebDL
+    if (/dvd/i.test(source)) result.source = Source.DVD
   }
 
   const codecMatch = details.match(re.codec)
