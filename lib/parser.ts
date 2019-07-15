@@ -4,11 +4,9 @@ enum Source {
   WebDL = 'webdl',
 }
 
-interface Result {
+type Result  = {
   show: string;
-  episodeCount: number;
   season: number;
-  episode?: number;
   year?: number;
   name?: string;
   codec?: string;
@@ -16,7 +14,13 @@ interface Result {
   source?: Source;
   group?: string;
   ext?: string;
-}
+} & ({
+  episode: number;
+  episodeCount: number;
+} | {
+  episode?: undefined;
+  episodeCount?: undefined;
+})
 
 const parsers = [
   parseEnglishLike,
@@ -38,15 +42,15 @@ function parseEnglishLike(filename: string) {
   )
 
   if (m) {
+    const firstEpisode = +m[6]
+    const lastEpisode = m[8] ? +m[8] : firstEpisode
     const result: Result = {
-      episodeCount: 1,
       show: m[1].replace(/\./g, ' '),
       season: +m[4],
-    }
-
-    if (m[6]) {
-      result.episode = +m[6]
-      if (m[8]) result.episodeCount += +m[8] - result.episode
+      ...m[6] ? {
+        episode: firstEpisode,
+        episodeCount: (lastEpisode - firstEpisode) + 1 
+      } : {}
     }
 
     if (m[3]) result.year = +m[3]
@@ -63,15 +67,15 @@ function parseSceneLike(filename: string) {
   )
 
   if (m) {
+    const firstEpisode = +m[6]
+    const lastEpisode = m[9] ? +m[9] : firstEpisode
     const result: Result = {
-      episodeCount: 1,
       show: m[1].replace(/\./g, ' '),
       season: +m[4],
-    }
-
-    if (m[6]) {
-      result.episode = +m[6]
-      if (m[9]) result.episodeCount += +m[9] - result.episode
+      ...m[6] ? {
+        episode: firstEpisode,
+        episodeCount: (lastEpisode - firstEpisode) + 1
+      } : {}
     }
 
     if (m[3]) result.year = +m[3]
@@ -88,15 +92,14 @@ function parseSceneLikeWithX(filename: string) {
   )
 
   if (m) {
-    const episode = +m[5]
+    const firstEpisode = +m[5]
+    const lastEpisode = m[7] ? +m[7] : firstEpisode
     const result: Result = {
-      episodeCount: 1,
       show: humanize(m[1]),
       season: +m[4],
-      episode,
+      episode: firstEpisode,
+      episodeCount: (lastEpisode - firstEpisode) + 1
     }
-
-    if (m[7]) result.episodeCount += +m[7] - episode
 
     if (m[3]) result.year = +m[3]
 
@@ -112,18 +115,18 @@ function parseSceneLike000(filename: string) {
   )
 
   if (m) {
-    const episode = m[4].substr(-2)
+    const episodeStr = m[4].substr(-2)
+    const firstEpisode = +episodeStr
+    const lastEpisode = m[6] ? +m[6] : firstEpisode
     const result: Result = {
-      episodeCount: 1,
       show: humanize(m[1]).replace(
         /\w\S*/g,
         txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
       ),
-      episode: +episode,
-      season: +m[4].substring(0, m[4].length - episode.length),
+      season: +m[4].substring(0, m[4].length - episodeStr.length),
+      episode: firstEpisode,
+      episodeCount: (lastEpisode - firstEpisode) + 1
     }
-
-    if (m[6]) result.episodeCount += +m[6] - +episode
 
     if (m[3]) result.year = +m[3]
 
