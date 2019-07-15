@@ -6,7 +6,7 @@ function run(filename, details, context) {
   context('with filename like ' + filename, function() {
     var result
     beforeEach(function() {
-      result = require('../../lib/parser')(filename)
+      result = require('../..')(filename)
     })
     Object.keys(details).forEach(function(property) {
       var value = details[property]

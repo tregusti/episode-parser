@@ -1,17 +1,17 @@
 {
   "rules": {
-    "indent": [ 2, 2 ],
+    "@typescript-eslint/indent": [ 2, 2 ],
     "quotes": [ 2, "single" ],
     "linebreak-style": [ 2, "unix" ],
-    "semi": [ 2, "never" ],
+    "@typescript-eslint/semi": [ 2, "never" ],
     "curly": [ 1, "multi" ],
     "no-console": 2,
-    "no-cond-assign": 0,
-    "no-use-before-define": [ 2, "nofunc" ],
-    "key-spacing": 0,
-    "no-multi-spaces": 0
+    "@typescript-eslint/no-use-before-define": [ 2, "nofunc" ]
   },
   "env": {
     "node": true
-  }
+  },
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+
 }

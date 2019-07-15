@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "noUnusedLocals": true,
+      "strictNullChecks": true,
+      "outDir": "dist",
+      "declaration": true
+    },
+    "include": [
+      "lib/**/*.ts"
+    ],
+  }
+  
