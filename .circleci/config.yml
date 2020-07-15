@@ -1,20 +1,5 @@
 version: 2
 jobs:
-  node8:
-    working_directory: ~/tregusti/episode-parser
-    docker:
-      - image: circleci/node:8
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-8-{{ checksum "package.json" }}
-      - run: npm install
-      - save_cache:
-          key: dependency-cache-8-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-      - run: npm run test
-
   node10:
     working_directory: ~/tregusti/episode-parser
     docker:
@@ -45,12 +30,27 @@ jobs:
             - node_modules
       - run: npm run test
 
+  node14:
+    working_directory: ~/tregusti/episode-parser
+    docker:
+      - image: circleci/node:14
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-14-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-14-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: npm run test
+
 workflows:
   version: 2
   nodes:
     jobs:
-      - node8
       - node10
       - node12
+      - node14
 
 # vim: sw=2 ts=2 expandtab
