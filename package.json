@@ -33,12 +33,12 @@
     "url": "http://tregusti.mit-license.org/"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.12.0",
-    "@typescript-eslint/parser": "^1.12.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
     "chai": "^4.2.0",
-    "eslint": "^6.0.1",
-    "mocha": "^6.1.4",
-    "standard-version": "^8.0.1",
-    "typescript": "^3.5.3"
+    "eslint": "^7.4.0",
+    "mocha": "^8.0.1",
+    "standard-version": "^8.0.2",
+    "typescript": "^3.9.6"
   }
 }
