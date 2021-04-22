@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/tregusti/episode-parser/compare/v2.0.0...v2.0.2) (2021-04-22)
+
+
+### Bug Fixes
+
+* Bump deps ([4c2b226](https://github.com/tregusti/episode-parser/commit/4c2b226bb430a95326b61d20397155fec038ae43))
+
 ### [2.0.0](https://github.com/tregusti/episode-parser/compare/v2.0.0...v1.5.0) (2020-07-15)
 
 * Removed support of Node v8. Rerelease of 1.5.1 since it was a breaking change.

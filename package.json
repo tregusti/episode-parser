@@ -1,6 +1,6 @@
 {
   "name": "episode-parser",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "Parse file names of tv show episodes.",
   "main": "dist/parser.js",
   "scripts": {
